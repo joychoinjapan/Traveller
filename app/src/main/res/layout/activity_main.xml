@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
 <!--   Fragment-->
     <FrameLayout
@@ -12,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
-
     </FrameLayout>
     <RadioGroup
         android:layout_width="match_parent"
@@ -20,31 +20,37 @@
         android:orientation="horizontal"
         android:layout_gravity="bottom">
         <RadioButton
+            android:id="@+id/index"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="首页"
             android:button="@null"
-            android:drawableTop="@mipmap/nav_main_normal">
+            android:drawableTop="@mipmap/nav_main_normal"
+            android:onClick="myClick">
         </RadioButton>
         <RadioButton
+            android:id="@+id/find"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="发现"
             android:button="@null"
-            android:drawableTop="@mipmap/nav_find_normal">
+            android:drawableTop="@mipmap/nav_find_normal"
+            android:onClick="myClick">
         </RadioButton>
         <RadioButton
+            android:id="@+id/me"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="我的"
             android:button="@null"
-            android:drawableTop="@mipmap/nav_me_normal">
+            android:drawableTop="@mipmap/nav_me_normal"
+            android:onClick="myClick">
         </RadioButton>
 
     </RadioGroup>
