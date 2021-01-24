@@ -1,15 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.IndexFragment"
-    android:background="#6A956C">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<!--    上部，展示广告-->
+    <include layout="@layout/index_top"/>
+
+<!--    下部1.菜单 2.资讯-->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="首页" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <GridView
+                android:id="@+id/grids"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:numColumns="4"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#55C5C1C1"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+                <LinearLayout
+                    android:id="@+id/flight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignTop="@+id/visa"
+                    android:layout_toLeftOf="@+id/visa"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/menu_second_airport"/>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:textColor="#474545"
+                        android:text="国际机票"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/visa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/menu_second_play"/>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:textColor="#474545"
+                        android:text="签证服务"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignTop="@+id/visa"
+                    android:layout_toRightOf="@+id/visa"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/menu_second_quan"/>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:textColor="#474545"
+                        android:text="飞机接送"
+                        android:textSize="18sp"/>
+                </LinearLayout>
 
-</FrameLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#55C5C1C1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/main_hot_news"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#474545"
+                    android:text="秋天真的来了，吃火锅就按这个火锅地图走！！"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+<!--            促销广告，3张图片，2：1：1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="24"
+                    android:src="@mipmap/main_spread1" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="13"
+                    android:src="@mipmap/main_spread2"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="13"
+                    android:src="@mipmap/main_spread3"/>
+            </LinearLayout>
+
+<!--            促销广告，1张图片-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:src="@mipmap/main_spread4"
+                android:layout_marginTop="5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/main_travle_online"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="旅行直播"
+                    android:textSize="20sp"
+                    android:textColor="#474545"/>
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    >
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/main_travle_online_pic"
+                        android:layout_marginRight="2dp"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/main_travle_online_pic2"
+                        android:layout_marginLeft="2dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="发现美国好东西"
+                            android:textColor="#E8E5E5"
+                            android:textSize="25sp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="资深老师解析，互动发红包"
+                            android:textColor="#E8E5E5"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+                        <ImageView
+                            android:layout_marginTop="2dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/main_travle_online_play"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SPG首次直播"
+                            android:textColor="#E8E5E5"
+                            android:textSize="25sp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="北京长安W酒店，耀动帝都"
+                            android:textColor="#E8E5E5"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+                        <ImageView
+                            android:layout_marginTop="2dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/main_travle_online_play"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

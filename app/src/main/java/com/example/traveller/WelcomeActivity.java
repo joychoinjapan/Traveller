@@ -12,12 +12,21 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        findViewById(R.id.logo).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
-                finish();
+        new Thread(){
+            public void run(){
+                super.run();
+                try {
+                    Thread.sleep(3000);
+                    startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+                    finish();
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
             }
-        });
+
+        }.start();
+
     }
 }

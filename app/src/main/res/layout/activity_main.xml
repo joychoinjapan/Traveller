@@ -21,36 +21,21 @@
         android:layout_gravity="bottom">
         <RadioButton
             android:id="@+id/index"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="首页"
-            android:button="@null"
-            android:drawableTop="@mipmap/nav_main_normal"
-            android:onClick="myClick">
+            android:drawableTop="@drawable/tab_index"
+            style="@style/tab_menu_item">
         </RadioButton>
         <RadioButton
             android:id="@+id/find"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="发现"
-            android:button="@null"
-            android:drawableTop="@mipmap/nav_find_normal"
-            android:onClick="myClick">
+            android:drawableTop="@drawable/tab_find"
+            style="@style/tab_menu_item">
         </RadioButton>
         <RadioButton
             android:id="@+id/me"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="我的"
-            android:button="@null"
-            android:drawableTop="@mipmap/nav_me_normal"
-            android:onClick="myClick">
+            android:drawableTop="@drawable/tab_me"
+            style="@style/tab_menu_item">
         </RadioButton>
 
     </RadioGroup>

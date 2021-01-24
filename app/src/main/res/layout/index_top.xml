@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></androidx.viewpager2.widget.ViewPager2>
+    <!--搜索等控件-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <!--左：扫一扫-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@mipmap/main_scan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫一扫"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!--中间：搜索框-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#22FFFFFF"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/search"></ImageView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:hint="目的地/静定/酒店/门票"></EditText>
+
+        </LinearLayout>
+
+        <!--右边消息-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@mipmap/news" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--ViewPager轮播指示器-->
+    <LinearLayout
+        android:id="@+id/pointers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/dot_selected" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/dot_unselected" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/dot_unselected" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/dot_unselected" />
+
+
+    </LinearLayout>
+
+</FrameLayout>
