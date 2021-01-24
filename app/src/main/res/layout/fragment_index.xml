@@ -41,10 +41,11 @@
                     android:layout_toLeftOf="@+id/visa"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
+
                     <ImageView
-                        android:layout_width="50dp"
+                        android:layout_width="59dp"
                         android:layout_height="50dp"
-                        android:src="@mipmap/menu_second_airport"/>
+                        android:src="@mipmap/menu_second_airport" />
                     <TextView
                         android:layout_width="50dp"
                         android:layout_height="50dp"

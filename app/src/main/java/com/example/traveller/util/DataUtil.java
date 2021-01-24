@@ -21,5 +21,9 @@ public class DataUtil {
     public static int[] index_menu_imgs= {R.mipmap.menu_airport,R.mipmap.menu_ticket,R.mipmap.menu_course,R.mipmap.menu_hatol,
     R.mipmap.menu_nearby,R.mipmap.menu_train,R.mipmap.menu_car,R.mipmap.menu_trav};
 
-    public static String[] index_menu_txt={"飞机票","住酒店","去旅游","周边游","买门票","火车票","汽车票","领里程"};
+    public static String[] index_menu_txt = {"飞机票","住酒店","去旅游","周边游","买门票","火车票","汽车票","领里程"};
+
+    public static int[] find_menu_imgs = {R.mipmap.find_main_travel,R.mipmap.find_main_square,R.mipmap.find_main_hotwind,R.mipmap.find_main_way};
+
+    public static String[] find_menu_txt = {"旅行热讯","广场动态","热点地带","边走边笑"};
 }
