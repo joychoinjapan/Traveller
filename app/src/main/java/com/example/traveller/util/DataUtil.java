@@ -26,4 +26,6 @@ public class DataUtil {
     public static int[] find_menu_imgs = {R.mipmap.find_main_travel,R.mipmap.find_main_square,R.mipmap.find_main_hotwind,R.mipmap.find_main_way};
 
     public static String[] find_menu_txt = {"旅行热讯","广场动态","热点地带","边走边笑"};
+
+    public static int[] find_toutiao_imgs={R.mipmap.find_hot_city,R.mipmap.find_hot_home,R.mipmap.find_hot_jiangnan};
 }

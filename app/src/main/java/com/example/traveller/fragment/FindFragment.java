@@ -3,13 +3,18 @@ package com.example.traveller.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 
+import com.example.traveller.MyAdapter;
 import com.example.traveller.R;
 import com.example.traveller.util.DataUtil;
 
@@ -22,6 +27,9 @@ import java.util.Map;
 public class FindFragment extends Fragment {
     private GridView gridView;
     private List<Map<String,Object>> list;
+    private RecyclerView recyclerView;
+    String title[];
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,9 +37,23 @@ public class FindFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_find, container, false);
         setGirdView(view);
+        setRecyclerView(view);
+
 
 
         return view;
+    }
+
+    private void setRecyclerView(View view) {
+        recyclerView = view.findViewById(R.id.toutiao_view);
+        title = getResources().getStringArray(R.array.title);
+        MyAdapter myAdapter = new MyAdapter(getContext(),title,DataUtil.find_toutiao_imgs);
+
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        RecyclerView.ItemDecoration itemDecoration =
+                new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(itemDecoration);
     }
 
     private void setGirdView(View view) {

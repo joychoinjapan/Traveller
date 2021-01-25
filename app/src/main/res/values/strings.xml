@@ -2,4 +2,9 @@
     <string name="app_name">Traveller</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="title">
+        <item>从广州去东莞只需要半个小时，美景美食都在等着你</item>
+        <item>旅行前最应该做的十件事情，千万不要忽略了</item>
+        <item>北京周边竟然藏着20个绝美仙境，够你免费玩一年</item>
+    </string-array>
 </resources>
